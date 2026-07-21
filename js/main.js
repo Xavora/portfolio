@@ -100,9 +100,12 @@
         end: function () { return "+=" + (track.scrollWidth - window.innerWidth); },
         pin: true,
         scrub: 1,
+        anticipatePin: 1,
         invalidateOnRefresh: true
       }
     });
+
+    window.addEventListener("load", function () { ScrollTrigger.refresh(); });
   }
 
   /* ================= Stats counters ================= */

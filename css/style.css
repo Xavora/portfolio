@@ -272,6 +272,12 @@ a { color: inherit; text-decoration: none; cursor: pointer; }
   padding: 0 clamp(20px, 4vw, 56px) clamp(40px, 5vw, 64px);
 }
 
+.work-wrap {
+  position: relative;
+  z-index: 5;
+  background: var(--bg);
+}
+
 .work-track {
   display: flex;
 }

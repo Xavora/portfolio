@@ -234,7 +234,7 @@
   /* ================= Three.js hero: red particle field + wireframe core ================= */
   function initHero3D() {
     var canvas = document.getElementById("hero-canvas");
-    if (!canvas || !window.THREE || reduceMotion) return;
+    if (!canvas || !window.THREE) return;
 
     var isMobile = !isDesktop;
     var COUNT = isMobile ? 700 : 2200;
@@ -243,7 +243,13 @@
     var camera = new THREE.PerspectiveCamera(60, 1, 0.1, 100);
     camera.position.z = 9;
 
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    var renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
+    } catch (err) {
+      canvas.remove();
+      return;
+    }
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     function cloud(count, spread, color, size, opacity) {
@@ -299,6 +305,19 @@
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
       }
+    }
+
+    /* Reduced motion: the scene stays visible as a still frame, it just does not move */
+    if (reduceMotion) {
+      var renderStill = function () {
+        resize();
+        core.rotation.set(0.4, 0.8, 0);
+        ring.rotation.z = 0.5;
+        renderer.render(scene, camera);
+      };
+      requestAnimationFrame(renderStill);
+      window.addEventListener("resize", renderStill);
+      return;
     }
 
     var visible = true;

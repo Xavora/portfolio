@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xavora | Maksym, web developer</title>
+  <meta name="description" content="Portfolio of Maksym (Xavora), founder of NEXTGEN STUDIO. Animated websites, booking systems and Telegram bots." />
+  <meta property="og:title" content="Xavora | Maksym, web developer" />
+  <meta property="og:description" content="Animated websites, booking systems and Telegram bots. Founder of NEXTGEN STUDIO." />
+  <meta property="og:image" content="https://xavora.github.io/portfolio/assets/nextgen.jpg" />
+  <meta property="og:url" content="https://xavora.github.io/portfolio/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <a class="nav-logo" href="#top">XAVORA</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#builds">Builds</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-gh" href="https://github.com/Xavora" target="_blank" rel="noopener">
+        <img src="https://cdn.simpleicons.org/github/e8eaed" alt="GitHub" width="20" height="20" />
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-inner">
+        <h1 class="hero-title">Websites, bots and<br />web apps that feel <span class="accent-italic">alive.</span></h1>
+        <p class="hero-sub">I'm Maksym, founder of NEXTGEN STUDIO in Lviv. I design and build animated sites, booking systems and Telegram bots.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#work">View work</a>
+          <a class="btn btn-ghost" href="https://github.com/Xavora" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK: live sites -->
+    <section class="work" id="work">
+      <h2 class="section-title">Selected work</h2>
+
+      <article class="tile tile-featured reveal">
+        <a class="tile-media" href="https://xavora.github.io/nextgen-studio-website/" target="_blank" rel="noopener">
+          <img src="assets/nextgen.jpg" alt="NEXTGEN STUDIO website" loading="eager" />
+        </a>
+        <div class="tile-body">
+          <h3>NEXTGEN STUDIO</h3>
+          <p>Studio site with a WebGL shader hero, scroll-driven scenes, uk/en localization and production-grade SEO.</p>
+          <p class="tile-stack">Three.js / GSAP / Vanilla JS</p>
+          <div class="tile-links">
+            <a class="link-live" href="https://xavora.github.io/nextgen-studio-website/" target="_blank" rel="noopener">Live site ↗</a>
+            <a class="link-code" href="https://github.com/Xavora/nextgen-studio-website" target="_blank" rel="noopener">Code</a>
+          </div>
+        </div>
+      </article>
+
+      <div class="tile-row">
+        <article class="tile reveal">
+          <a class="tile-media" href="https://xavora.github.io/barbershop-24/" target="_blank" rel="noopener">
+            <img src="assets/barbershop24.jpg" alt="Barbershop 24 landing page" loading="lazy" />
+          </a>
+          <div class="tile-body">
+            <h3>Barbershop 24</h3>
+            <p>Landing page with a 3D particle hero and a multi-step booking flow wired to a real backend.</p>
+            <p class="tile-stack">Three.js / GSAP / FastAPI</p>
+            <div class="tile-links">
+              <a class="link-live" href="https://xavora.github.io/barbershop-24/" target="_blank" rel="noopener">Live site ↗</a>
+              <a class="link-code" href="https://github.com/Xavora/barbershop-24" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile reveal">
+          <a class="tile-media" href="https://xavora.github.io/hustle-barbershop/" target="_blank" rel="noopener">
+            <img src="assets/hustle.jpg" alt="Hustle Barbershop landing page" loading="lazy" />
+          </a>
+          <div class="tile-body">
+            <h3>Hustle Barbershop</h3>
+            <p>A 3D barber pole scene, 3,000 reactive particles and live slot availability pulled from the booking API.</p>
+            <p class="tile-stack">Three.js / GSAP / FastAPI</p>
+            <div class="tile-links">
+              <a class="link-live" href="https://xavora.github.io/hustle-barbershop/" target="_blank" rel="noopener">Live site ↗</a>
+              <a class="link-code" href="https://github.com/Xavora/hustle-barbershop" target="_blank" rel="noopener">Code</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STACK MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>THREE.JS / GSAP / FASTAPI / AIOGRAM / SQLALCHEMY / NODE.JS / WEBGL / PYTHON / TELEGRAM BOT API / SEO /&nbsp;</span>
+        <span>THREE.JS / GSAP / FASTAPI / AIOGRAM / SQLALCHEMY / NODE.JS / WEBGL / PYTHON / TELEGRAM BOT API / SEO /&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- BUILDS: bots & backends -->
+    <section class="builds" id="builds">
+      <h2 class="section-title">Bots, backends and apps</h2>
+      <div class="build-grid">
+
+        <a class="build-card reveal" href="https://github.com/Xavora/Ukraine-GTA-Rules" target="_blank" rel="noopener">
+          <h3>Ukraine GTA Rules</h3>
+          <p>Rulebook web app for a GTA 5 RP server: fuzzy search, user roles and an admin panel on a zero-dependency Node.js backend.</p>
+          <p class="build-stack">Node.js / Fuse.js / scrypt sessions</p>
+          <span class="build-arrow">↗</span>
+        </a>
+
+        <a class="build-card reveal" href="https://github.com/Xavora/barbershop-24-booking" target="_blank" rel="noopener">
+          <h3>Barbershop 24 Booking</h3>
+          <p>REST API with smart 15-minute slot calculation plus a Telegram bot for barbers, managers and admins.</p>
+          <p class="build-stack">FastAPI / aiogram 3 / SQLAlchemy</p>
+          <span class="build-arrow">↗</span>
+        </a>
+
+        <a class="build-card reveal" href="https://github.com/Xavora/hustle-barbershop-booking" target="_blank" rel="noopener">
+          <h3>Hustle Booking</h3>
+          <p>Booking backend with staff roles and Telegram notifications the moment a client books on the site.</p>
+          <p class="build-stack">FastAPI / aiogram 3 / SQLAlchemy</p>
+          <span class="build-arrow">↗</span>
+        </a>
+
+        <a class="build-card reveal" href="https://github.com/Xavora/p2p_bot" target="_blank" rel="noopener">
+          <h3>P2P Monitor</h3>
+          <p>Telegram bot watching the Bybit P2P market: live USDT/UAH rates, spread analysis and price alerts.</p>
+          <p class="build-stack">Python / aiogram 3 / aiohttp</p>
+          <span class="build-arrow">↗</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <h2 class="contact-title">Have a project in mind?</h2>
+      <a class="btn btn-primary btn-big" href="mailto:romahoros@gmail.com">Email me</a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2026 Maksym / NEXTGEN STUDIO</span>
+    <a href="https://github.com/Xavora" target="_blank" rel="noopener">github.com/Xavora</a>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
